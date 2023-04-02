@@ -1,0 +1,160 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    margin: 0;
+    padding: 0  ;
+
+}
+
+/* card section */
+.card {
+    width: 90%;
+    max-width: 25rem;
+    padding: 1.2rem;
+    background: hsl(216, 50%, 16%);
+    border-radius: 1rem;
+}
+
+
+.card-image {
+    max-width: 100%;
+    margin: 0;
+    display: block;
+}
+
+.card-image__container {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+/* Overlay styles */
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  hsla(178, 100%, 50%, 30%);
+    display: grid;
+    place-items: center;
+}
+
+.card-image__container:hover .overlay {
+    cursor: pointer;
+    visibility: visible;
+}
+/* inner card styles */
+.card-heading {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-heading:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.card-para1 {
+    color: hsl(215, 51%, 70%);
+    font-weight: 200;
+    font-size: 1.3rem;
+}
+
+.card-aside {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-aside__left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.card-aside__left-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: hsl(178, 100%, 50%);
+}
+.card-aside__right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.card-aside__right-text {
+    color: hsl(215, 51%, 70%);
+    font-size: 1.3rem;
+}
+
+hr {
+    margin: 2rem 0;
+    border: 1px solid hsl(215, 32%, 27%);
+}
+
+/* card footer styles */
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-footer img {
+    width: 3rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.card-footer__title {
+    font-size: 1.3rem;
+    color: hsl(215, 51%, 70%);
+}
+
+.card-footer__title span {
+    color: hsl(0, 0%, 100%);
+}
+
+.card-footer__title span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+/* Media query */
+
+@media (max-width:600px) {
+
+
+/* inner card styles */
+.card-heading {
+   font-size: 1.2rem;
+}
+
+.card-para1 {
+    font-size: 0.9rem;
+}
+
+
+.card-aside__left-text {
+    font-size: 0.9rem;
+}
+
+.card-aside__right-text {
+    font-size: 0.9rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+/* card footer styles */
+.card-footer__title {
+    font-size: 1rem;
+}
+}
